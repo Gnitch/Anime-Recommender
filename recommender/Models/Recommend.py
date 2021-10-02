@@ -34,7 +34,7 @@ class AnimeRecommender :
         print('content initialised')
 
         # Hybrid Filtering
-        self.model = joblib.load(r'recommender\Models\svd.joblib')                     
+        # self.model = joblib.load(r'recommender\Models\svd.joblib')                     
         print('hybrid initialised')
 
 

@@ -9,5 +9,5 @@
 - Move these files (Dataset files and model file(svd.joblib)) to `recommender/Models` directory
 - Go to the project folder and run  `py/python/python3 manage.py runserver` command in the cmd-prompt or terminal
 
-![](https://github.com/Gnitch/Anime-Recommender/blob/master/screenshots/ss1.png)
 ![](https://github.com/Gnitch/Anime-Recommender/blob/master/screenshots/ss3.png)
+![](https://github.com/Gnitch/Anime-Recommender/blob/master/screenshots/ss2.png)

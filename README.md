@@ -3,7 +3,7 @@
 ### This Recommendation system is based on `Content-Based Filtering` and `Hybrid filtering`
 
 ## Guide
-- Download the Dataset From: [rating.csv](https://www.kaggle.com/CooperUnion/anime-recommendations-database?select=rating.csv), [anime.csv](https://www.kaggle.com/hernan4444/anime-recommendation-database-2020?select=anime.csv) and [anime_with_synopsis.csv](https://www.kaggle.com/hernan4444/anime-recommendation-database-2020?select=anime_with_synopsis.csv)
+- Download the Dataset From: [rating.csv](https://www.kaggle.com/CooperUnion/anime-recommendations-database?select=rating.csv) and [anime_with_synopsis.csv](https://www.kaggle.com/hernan4444/anime-recommendation-database-2020?select=anime_with_synopsis.csv)
 
 - Run this notebook [anime-recommender.ipynb](https://github.com/Gnitch/Anime-Recommender/blob/master/recommender/Models/anime-recommender.ipynb) in jupyter-notebook or vscode
 - And move these files to `recommender/Models` directory

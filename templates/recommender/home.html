@@ -20,9 +20,7 @@
     <style>
 
     body {
-        background: #e8cbc0;
-        background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
-        background: linear-gradient(to right, #e8cbc0, #636fa4);
+        background: #C4D3F6;
         min-height: 100vh;
     }
 
@@ -62,12 +60,14 @@
 
         }
 
+
     #searchbtn
     { border:0;
     padding: 0px 10px;
     margin-top: 10px;
+    padding-bottom: 4px;
     color: #fff;
-    background:#888;
+    background: #6575f3;
     font-size: 27px;
     font-weight: 500;
         border: 3px solid #555;
@@ -86,19 +86,18 @@
                     
     <div class="row text-center text-white mb-5 py-4">
         <div class="col-lg-9 mx-auto">
-            <h1 class="display-5">Recommendation System for Animated shows</h1>
+            <h1 class="display-5" style="color: #6575f3;">Recommendation System for Animated shows</h1>
         </div>
     </div>
     <form action="{% url 'recommender:an-recommend' %}" method="POST">
     <div class="row">
         <div class="col-lg-6 mx-auto">
-            <label class="text-white mb-3 lead">Choose one option:</label>
-            <!-- Multiselect dropdown -->
+            <label class="text-black mb-3 lead">Choose one option:</label>
             
             <select name='input_option' data-style="bg-white rounded-pill px-4 py-3 shadow-sm " class="selectpicker w-100">
                 <option value="1" selected >Content-Based Filtering</option>
                 <option value="2">Hybrid Filtering</option>
-            </select><!-- End -->
+            </select>
 
             <br><br><br>
         <div class="input-group mt-5">

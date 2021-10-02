@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import home,animeRecommend
+from .views import home, animeRecommend
 
 app_name = 'recommender'
 urlpatterns = [

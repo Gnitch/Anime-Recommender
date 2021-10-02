@@ -34,8 +34,8 @@ class AnimeRecommender :
         print('content initialised')
 
         # Hybrid Filtering
-        # self.model = joblib.load(r'recommender\Models\svd.joblib')                     
-        # print('hybrid initialised')
+        self.model = joblib.load(r'recommender\Models\svd.joblib')                     
+        print('hybrid initialised')
 
 
     def content(self,title):  
@@ -66,14 +66,17 @@ class AnimeRecommender :
         id_map['id'] = list(range(1,self.anime_df.shape[0]+1,1))
         id_map = id_map.merge(self.anime_df[['MAL_ID', 'Name','Genres','Score']], on='MAL_ID').set_index('Name')   
         indices_map = id_map.set_index('id')        
-        qualified = self.content(title)
-        # qualified['wr'] = qualified.apply(weighted_rating, axis=1)
-        qualified = qualified.sort_values('wr', ascending=False).head(30)            
-        qualified['id'] = list(range(1,qualified.shape[0]+1,1))  
-        qualified['est'] = qualified['id'].apply(lambda x: self.model.predict(user_id, indices_map.loc[x]['MAL_ID']).est)
-        qualified = qualified.sort_values('est', ascending=False)
-        result = qualified['MAL_ID']         
-        return result.head(10)
+        idx = self.indices[title]
+        sim_scores = list(enumerate(self.cosine_sim[idx]))
+        sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+        sim_scores = sim_scores[1:31]
+        anime_indices = [i[0] for i in sim_scores]
+        anime_lst = self.anime_df.iloc[anime_indices][['MAL_ID','Name', 'Members', 'Score']]          
+        anime_lst['id'] = list(range(1,anime_lst.shape[0]+1,1))  
+        anime_lst['est'] = anime_lst['id'].apply(lambda x: self.model.predict(user_id, indices_map.loc[x]['MAL_ID']).est)
+        anime_lst = anime_lst.sort_values('est', ascending=False)
+        result = anime_lst['MAL_ID']         
+        return result.head(5)
 
 
 

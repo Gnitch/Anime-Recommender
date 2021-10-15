@@ -1,5 +1,6 @@
 # Anime Recommender
 ## A Recommendation system for Animated shows
+#### Kaggle Link: [https://www.kaggle.com/gnitch/anime-recommender](https://www.kaggle.com/gnitch/anime-recommender)
 ### This Recommendation system is based on `Content-Based Filtering` and `Hybrid filtering`
 
 ## Guide

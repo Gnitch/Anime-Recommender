@@ -292,21 +292,21 @@ iframe {
 						</div>
 
 						{% if object_list %}
-							{% for obj in object_list %}								
+							{% for name, score, mal_id, genre, rank in object_list %}								
 									<div class="row">                                        
 										<div class="cell" data-title="Name">										
-                      <a target="_blank" href="https://myanimelist.net/anime/{{obj.mal_id}}">
-                        {{obj.name}}										
+                      <a target="_blank" href="https://myanimelist.net/anime/{{mal_id}}">
+                        {{name}}										
                       </a>											
 										</div>
 										<div class="cell" data-title="Score">
-											{{obj.score}}
+											{{score}}
 										</div>
 										<div class="cell" data-title="Genre">
-											{{obj.genres}}
+											{{genre}}
 										</div>
 										<div class="cell" data-title="Rank">
-											{{obj.popularity}}
+											{{rank}}
 										</div>                  
 									</div>								
 							{% endfor %}

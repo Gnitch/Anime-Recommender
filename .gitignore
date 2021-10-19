@@ -4,3 +4,4 @@ path.txt
 recommender/Models/svd.joblib
 recommender/Models/anime_with_synopsis.csv
 recommender/Models/rating.csv
+recommender/Models/.ipynb_checkpoints/
